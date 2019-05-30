@@ -1,0 +1,11 @@
+<mat-card>
+  <h2>play</h2>
+</mat-card>
+<div class="container">
+  <div class="card" *ngFor="let image of images; let idx = index" (click)="showImage(idx)">
+    <div class="front" [ngClass]="getActiveCard(idx)?'flip-front':'flip-back'"></div>
+    <div class="back" [ngClass]="getActiveCard(idx)?'flip-back':'flip-front'"><img [src]="image"></div>
+    <!--<src [src]="image" alt="">-->
+  </div>
+</div>
+<span>{{points}}<span>
